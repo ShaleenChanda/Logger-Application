@@ -6,7 +6,7 @@ const io = require("socket.io")(server);
 const fs = require("fs");
 
 let bite_size = 256,
-  readbytes = 0,
+  readbytes,
   file;
 
 app.set("view engine", "ejs");
@@ -57,6 +57,7 @@ io.on("connection", (socket) => {
   try {
     fs.open(`logs/${filePath}`, "r", function (err, fd) {
       file = fd;
+      readbytes = 0;
       readsome(socket);
     });
     socket.emit("user-connected");

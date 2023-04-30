@@ -61,39 +61,6 @@
     text-align: center;
   }
   
-<<<<<<< HEAD
-=======
-  /* Scrollbar styling */
-  .logview::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .logview::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
-  }
-  
-  .logview::-webkit-scrollbar-thumb:hover {
-    background-color: #999;
-  }
-  
-  /* Highlighting for log levels */
-  .error {
-    color: #c00;
-  }
-  
-  .warning {
-    color: #f90;
-  }
-  
-  .info {
-    color: #333;
-  }
-  
-  .debug {
-    color: #666;
-  }
->>>>>>> c004a88 (updating after some UI changes)
   input {
     padding: 8px 16px;
     border: 1px solid #fefefe;
@@ -103,23 +70,4 @@
     border-radius: 10px;
     background-color: inherit;
     color: #fefefe;
-<<<<<<< HEAD
-=======
-  }
-
-  /* #title {
-    
-  } */
-
-  .title-wrapper {
-    background-color: #0f0f0f; /* black background color */
-    padding: 20px; /* add padding to the wrapper to create some space around the image */
-  }
-  
-  .title-image {
-    display: inline-block; /* change display to inline-block to align the image to the left */
-    vertical-align: middle; /* align the image vertically to the middle of the title-wrapper */
-    max-width: 17%; /* reduce the width of the image to 50% of its original size */
-    margin-right: 20px; /* add some spacing between the image and any text that comes after it */
->>>>>>> c004a88 (updating after some UI changes)
   }

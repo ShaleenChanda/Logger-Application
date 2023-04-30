@@ -51,11 +51,6 @@ function processsome(err, bytecount, buff, socket) {
   process.nextTick(() => readsome(socket));
 }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> c004a88 (updating after some UI changes)
 io.on("connection", (socket) => {
   filePath = socket.handshake.query.filepath;
   console.log("User connected");

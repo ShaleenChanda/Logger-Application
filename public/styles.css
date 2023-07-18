@@ -3,8 +3,10 @@
     margin: 0;
   }
   
+
+  
   body {
-    background-color: #202020;
+    background-color: #302d2d;
   }
   
   .alert {
@@ -12,7 +14,7 @@
     top: 24px;
     right: 24px;
     padding: 16px 24px;
-    background-color: cornflowerblue;
+    background-color: #1dc4ee;
     border-radius: 8px;
     color: whitesmoke;
     display: none;
@@ -25,7 +27,7 @@
   }
   
   button {
-    background-color: rgb(212, 61, 61);
+    background-color: rgb(57, 235, 235);
     padding: 10px 24px;
     border: none;
     outline: none;
@@ -33,25 +35,102 @@
     margin: 24px;
     cursor: pointer;
   }
-  
   .controls {
     display: flex;
-    margin: 24px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 24px auto;
+    max-width: 600px;
   }
   
+  .controls label {
+    font-size: 30px;
+    margin-bottom: 16px;
+    color: #ebe1e1;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .input-wrapper input {
+    border: none;
+    border-radius: 10px;
+    padding: 24px;
+    font-size: 24px;
+    width: 100%;
+    max-width: 500px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .input-wrapper input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #007bff;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .controls button {
+    margin: 0 16px;
+    border: none;
+    background-color: #1dc4ee;
+    color: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background-color: #1dc4ee;
+  }
+  
+  .controls button:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
   .logview {
     border: 1px solid #e0e0e0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin: 24px;
     height: 70vh;
     max-height: 80vh;
     overflow-y: auto;
     box-sizing: border-box;
     padding: 24px;
-    color: green;
+    background-color: #0a0a0a;
+  }
+  
+  .logs {
+    font-family: "Courier New", Courier, monospace;
+    color: #2fa6dd;
   }
   
   .logs > p {
-    margin-bottom: 16px;
+    margin: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logs > p:last-child {
+    border-bottom: none;
   }
   
   .paused {
@@ -61,6 +140,36 @@
     text-align: center;
   }
   
+  /* Scrollbar styling */
+  .logview::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .logview::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+  .logview::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
+  
+  /* Highlighting for log levels */
+  .error {
+    color: #c00;
+  }
+  
+  .warning {
+    color: #f90;
+  }
+  
+  .info {
+    color: #333;
+  }
+  
+  .debug {
+    color: #666;
+  }
   input {
     padding: 8px 16px;
     border: 1px solid #fefefe;
@@ -70,4 +179,21 @@
     border-radius: 10px;
     background-color: inherit;
     color: #fefefe;
+  }
+
+  .title-wrapper {
+    background-color: #000000; /* black background color */
+    padding: 20px; /* add padding to the wrapper to create some space around the image */
+  }
+  
+  .title-image {
+    display: inline-block; /* change display to inline-block to align the image to the left */
+    vertical-align: middle; /* align the image vertically to the middle of the title-wrapper */
+    max-width: 50%; /* reduce the width of the image to 50% of its original size */
+    margin-right: 20px; /* add some spacing between the image and any text that comes after it */
+  }
+
+  .title-image {
+    width: 350px;
+    height: auto;
   }

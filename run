@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build -t filelogger .
+docker run -p 3000:3000 --name filelogger filelogger

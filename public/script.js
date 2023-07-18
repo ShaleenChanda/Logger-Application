@@ -46,7 +46,13 @@ document.querySelector("#control__pause").addEventListener("click", () => {
   document.querySelector(".paused").style.display = settings.paused
     ? "block"
     : "none";
+
+    if(settings.paused){
+      socket.emit("paused");
+    }
 });
+
+
 
 document.querySelector("#alert__close").addEventListener("click", () => {
   document.querySelector(".alert").style.display = "none";
